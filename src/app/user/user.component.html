@@ -1,0 +1,5 @@
+<div id={{user.email}} [ngClass]="isCurrentUser()?'flogin':'felh'" [ngStyle]="styles()">
+    <img src={{user.avatar}} class="meret">
+    <b>{{user.name}}</b>
+    <input *ngIf="isCurrentUser() && !postEmbedded" type="button" value="kép cseréje" (click)="kepcsere()"/>
+</div>
