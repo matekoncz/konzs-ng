@@ -30,12 +30,12 @@ jobs:
     #   run: npm run test:headless
 
     - name: Build
-      run: npm run build
+      run: npm run build -- --base-href /konzs-ng/
 
     - name: Deploy
       if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: dist/${{ github.event.repository.name }}
+        publish_dir: dist/konzs-ng
         enable_jekyll: true
